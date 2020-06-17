@@ -87,12 +87,13 @@ a:focus {
 }
 
 #inner {
-  width: 50%;
-  margin: 0 auto;
+	display: block;
+	width: 50%;
+	margin: 0 auto;
 }
 
 #outer {
-  width:100%
+	width:100%
 }
 
 .contacts,
