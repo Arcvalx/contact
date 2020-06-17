@@ -8,8 +8,8 @@ body {
 	/*background-image: url('arboles.jpg');*/
 	background-image: url('img/night.jpg');
 	background-repeat: no-repeat;
-	background-size: 100vh 100vw;
-	background-attachment: fixed
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 body {
