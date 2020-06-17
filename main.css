@@ -80,6 +80,17 @@ a:focus {
 	outline: thin dotted;
 }
 
+#inner {
+  display: table;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+#outer {
+  border: 1px solid red;
+  width:100%
+}
+
 .titles {
 	text-align: center;
 	width: 100%;
