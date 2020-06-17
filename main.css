@@ -80,15 +80,6 @@ a:focus {
 	outline: thin dotted;
 }
 
-#inner {
-  display: block;
-  margin: 0 auto;
-}
-
-#outer {
-  width:100%
-}
-
 .titles {
 	text-align: center;
 	width: 100%;
