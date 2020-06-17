@@ -1,2 +1,0 @@
-# contact
-Pagina de contacto.
