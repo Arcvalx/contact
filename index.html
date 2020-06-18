@@ -24,7 +24,6 @@
 		<title>Arcvalx · Sergio Casares</title>
 		<link href="main.css" rel="stylesheet" />
 		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="core.js"></script>
 		<!-- Para navidad... 
 		<script type="text/javascript" src="snowstorm.js"></script>
@@ -93,8 +92,30 @@
 				<br />
 				<div id="outer">
 					<div id="inner">
-						<iframe class="frame" width="100%" height="60" src="" frameborder="0" allow="autoplay"></iframe>
+						<iframe class="frameMixcloud" width="100%" height="60" src="" frameborder="0" allow="autoplay"></iframe>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 						<script>
+							var cat1 = [
+								"https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Ftrance-arcvalx-dj-set-070620%2F",
+								"https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Fvocal-trance-arcvalx-dj-set-060820%2F",
+								"https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Fnew-trance-dj-set-arcvalx-b2b-leafar-052720%2F",
+								"https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Fnew-trance-dj-set-052020%2F",
+								"https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Farcvalx-dj-set-progressive-to-psytrance%2F"
+							];
+
+							var myFrame = document.getElementsByClassName("frameMixcloud")[0];
+
+							function getRandomUrl(myFrame) {
+							  var index = Math.floor(Math.random() * cat1.length);
+							  var url = cat1[index];
+							  myFrame.src = url;
+							}
+
+							function codeAddress() {
+							  getRandomUrl(myFrame);
+							}
+						</script>
+						<script type="text/javascript">
 							codeAddress();
 						</script>
 						<br />
