@@ -157,3 +157,27 @@ function actualizar() {
 }
 function prev() { player.previousVideo() }
 function next() { player.nextVideo() }
+
+var cat1 = [
+  "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Ftrance-arcvalx-dj-set-070620%2F",
+  "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Fvocal-trance-arcvalx-dj-set-060820%2F",
+  "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Fnew-trance-dj-set-arcvalx-b2b-leafar-052720%2F",
+  "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Fnew-trance-dj-set-052020%2F",
+  "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2Farcvalx-dj-set-progressive-to-psytrance%2F",
+];
+
+var myFrame = document.getElementsByClassName("frame")[0];
+
+function getRandomUrl(myFrame) {
+  var index = Math.floor(Math.random() * cat1.length);
+  var url = cat1[index];
+  myFrame.src = url;
+}
+
+function codeAddress() {
+  getRandomUrl(myFrame);
+}
+
+codeAddress();
+
+console.log(myFrame.src);
