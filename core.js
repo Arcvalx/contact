@@ -177,7 +177,3 @@ function getRandomUrl(myFrame) {
 function codeAddress() {
   getRandomUrl(myFrame);
 }
-
-codeAddress();
-
-console.log(myFrame.src);
