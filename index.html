@@ -95,24 +95,24 @@
 						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 						<script>
 							
-							var cat1 = [
-								"trance-arcvalx-dj-set-12212020%2F",
-							        "edm-arcvalx-dj-set-12132020%2F",
-								"trance-arcvalx-dj-set-11232020%2F",
-								"edm-arcvalx-dj-set-1112020%2F",
-								"trance-arcvalx-dj-set-08282020%2F"
+							var listas = [
+								"trance-arcvalx-dj-set-12212020",
+							        "edm-arcvalx-dj-set-12132020",
+								"trance-arcvalx-dj-set-11232020",
+								"edm-arcvalx-dj-set-1112020",
+								"trance-arcvalx-dj-set-08282020"
 							];
 
-							var myFrame = document.getElementsByClassName("frameMixcloud")[0];
+							var mixcloudiFrame = document.getElementsByClassName("frameMixcloud")[0];
 
-							function getRandomUrl(myFrame) {
-							  var index = Math.floor(Math.random() * cat1.length);
-							  var url = cat1[index];
-							  myFrame.src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2F" + url;
+							function getRandomUrl(mixcloudiFrame) {
+							  var random = Math.floor(Math.random() * listas.length);
+							  var djset = listas[random];
+							  mixcloudiFrame.src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2F" + djset + "%2F";
 							}
 
 							function codeAddress() {
-							  getRandomUrl(myFrame);
+							  getRandomUrl(mixcloudiFrame);
 							}
 						</script>
 						<script type="text/javascript">
