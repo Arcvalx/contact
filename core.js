@@ -1,3 +1,50 @@
+// Lista de enlaces con sus respectivas enumeraciones. (Minetras mas alto el número mas probabilidad de salir)
+var links = [
+	{ url: "trance-avx-dj-set-2212021", weight: 24 },
+	{ url: "trance-avx-dj-set-02102021", weight: 100 },
+	{ url: "trance-arcvalx-dj-set-1312021", weight: 23 },
+	{ url: "trance-arcvalx-dj-set-1232021", weight: 22 },
+	{ url: "trance-arcvalx-dj-set-12212020", weight: 21 },
+	{ url: "edm-arcvalx-dj-set-12132020", weight: 20 },
+	{ url: "trance-arcvalx-dj-set-11232020", weight: 19 },
+	{ url: "edm-arcvalx-dj-set-1112020", weight: 18 },
+	{ url: "trance-arcvalx-dj-set-08282020", weight: 17 },
+	{ url: "trance-arcvalx-dj-set-08142020", weight: 16 },
+	{ url: "trance-arcvalx-dj-set-07262020", weight: 15 },
+	{ url: "trance-arcvalx-dj-set-07192020", weight: 14 },
+	{ url: "old-dance-arcvalx-dj-set-07192020", weight: 13 },
+	{ url: "edm-arcvalx-mini-dj-set-07052020", weight: 12 },
+	{ url: "trance-arcvalx-dj-set-070520", weight: 11 },
+	{ url: "trance-arcvalx-dj-set-06262020", weight: 10 },
+	{ url: "trance-arcvalx-dj-set-06202020", weight: 9 },
+	{ url: "vocal-trance-arcvalx-dj-set-060820", weight: 8 },
+	{ url: "trance-arcvalx-dj-set-070620", weight: 7 },
+	{ url: "new-trance-dj-set-arcvalx-b2b-leafar-052720", weight: 6 },
+	{ url: "new-trance-dj-set-052020", weight: 5 },
+	{ url: "arcvalx-dj-set-progressive-to-psytrance", weight: 4},
+	{ url: "new-set-trance-february-27-28-2020", weight: 3 },
+	{ url: "mini-set-january-30-2020-4-tracks", weight: 2 },
+	{ url: "set-enero-2019-trance-psytrance", weight: 1 }
+];
+
+// Probabilidad por tamaño de Weight
+function weightedRandom(arr) {
+	var weightSum = arr.map(l => l.weight).reduce((a, b) => a + b, 0);
+	var rand = Math.random() * weightSum;
+	var accumulated = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if (rand < accumulated + arr[i].weight) {
+			return arr[i];
+		}
+		accumulated += arr[i].weight;
+	}
+}
+
+// Compilar URL en funcion openSite()
+function openSite() { document.getElementsByClassName("frameMixcloud")[0].src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&autoplay=1&feed=%2FArcvalx%2F" + weightedRandom(links).url + "%2F"; }
+
+//------------------------------------------------------------------------------------------------------------
+
 var isCtrl = false;
 
 document.onkeyup = function(e) {				
