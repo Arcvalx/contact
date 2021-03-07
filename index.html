@@ -120,10 +120,8 @@
 								{ url: "arcvalx-dj-set-progressive-to-psytrance", weight: 4},
 								{ url: "new-set-trance-february-27-28-2020", weight: 3 },
 								{ url: "mini-set-january-30-2020-4-tracks", weight: 2 },
-								{ url: "set-enero-2019-trance-psytrance" weight: 1 },
+								{ url: "set-enero-2019-trance-psytrance", weight: 1 }
 							];
-
-							var mixcloudiFrame = document.getElementsByClassName("frameMixcloud")[0];
 
 							function weightedRandom(arr) {
 
@@ -144,18 +142,17 @@
 
 							}
 
-							function getRandomUrl(mixcloudiFrame) {
-								var djset = weightedRandom(links);
-								mixcloudiFrame.src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2F" + djset.url + "%2F";
-							}
-
-							function codeAddress() {
-								getRandomUrl(mixcloudiFrame);
+							
+							function openSite() {
+								var link = weightedRandom(links);
+								var mixcloudiFrame = document.getElementsByClassName("frameMixcloud");
+								mixcloudiFrame.src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&autoplay=1&feed=%2FArcvalx%2F" + link.url + "%2F";
+								console.log(link.url);
 							}
 							
 						</script>
 						<script type="text/javascript">
-							codeAddress();
+							openSite();
 						</script>
 						<br />
 						<a href="https://www.mixcloud.com/Arcvalx" target="_blank" rel="me">» Go to AVX mixcloud profile (Click here)</a>
